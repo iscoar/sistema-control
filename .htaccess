@@ -1,0 +1,7 @@
+RewriteEngine on
+ErrorDocument 404 http://seguridad-respaldo-cflo.com/error/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
